@@ -40,8 +40,8 @@ let styles = StyleSheet.create({
     right: 0,
   },
   shadow: {
-    backgroundColor: 'rgba(0, 0, 0, 0.25)',
-    height: Layout.pixel,
+    backgroundColor: 'rgba(50, 50, 50, 0.25)',
+    height: 5 * Layout.pixel,
     position: 'absolute',
     left: 0,
     right: 0,
