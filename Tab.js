@@ -54,7 +54,6 @@ export default class Tab extends React.Component {
 
     let tabStyle = [
       styles.container,
-      title ? null : styles.untitledContainer,
       this.props.style,
     ];
     return (
@@ -90,9 +89,6 @@ let styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'flex-end',
     alignItems: 'center',
-  },
-  untitledContainer: {
-    paddingBottom: 13,
   },
   title: {
     color: '#929292',

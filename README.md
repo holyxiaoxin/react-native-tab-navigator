@@ -25,8 +25,12 @@ import TabNavigator from 'react-native-tab-navigator';
 This is an example of how to use the component and some of the commonly used props that it supports:
 
 ```js
-<TabNavigator>
+<TabNavigator
+  tabBarStyle={{backgroundColor: '#fff'}}
+  tabBarHeight={100}
+>
   <TabNavigator.Item
+    tabStyle={{justifyContent: 'center'}}
     selected={this.state.selectedTab === 'home'}
     title="Home"
     renderIcon={() => <Image source={...} />}
@@ -36,6 +40,7 @@ This is an example of how to use the component and some of the commonly used pro
     {homeView}
   </TabNavigator.Item>
   <TabNavigator.Item
+    tabStyle={{justifyContent: 'center'}}
     selected={this.state.selectedTab === 'profile'}
     title="Profile"
     renderIcon={() => <Image source={...} />}
