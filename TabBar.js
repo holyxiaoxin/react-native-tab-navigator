@@ -17,17 +17,17 @@ export default class TabBar extends React.Component {
   };
 
   render() {
-    const tabBarHeight = this.props.tabBarHeight;
+    const { tabBarHeight, tabBarBorderTopWidth } = this.props;
     return (
       <Animated.View {...this.props} style={[styles.container, this.props.style, { height: tabBarHeight }]}>
         {this.props.children}
-        <View style={[styles.shadow, this.props.shadowStyle]} />
+        <View style={[styles.shadow, this.props.shadowStyle, { height: tabBarBorderTopWidth }]} />
       </Animated.View>
     );
   }
 }
 
-TabBar.defaultProps = { tabBarHeight: Layout.tabBarHeight };
+TabBar.defaultProps = { tabBarHeight: Layout.tabBarHeight, tabBarBorderTopWidth: Layout.tabBarBorderTopWidth };
 
 let styles = StyleSheet.create({
   container: {
@@ -41,7 +41,6 @@ let styles = StyleSheet.create({
   },
   shadow: {
     backgroundColor: 'rgba(50, 50, 50, 0.25)',
-    height: 5 * Layout.pixel,
     position: 'absolute',
     left: 0,
     right: 0,
